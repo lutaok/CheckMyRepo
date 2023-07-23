@@ -1,0 +1,27 @@
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .text-input {
+    background-color: transparent;
+    outline: 0; // Not a best practice
+    border: 0;
+    border-bottom: 2px solid #242424;
+    flex-basis: 100%;
+
+    font-size: 1.25rem;
+    color: #242424;
+
+    transition: border-color 0.2s;
+
+    &::placeholder {
+      color: rgb(84, 100, 137);
+    }
+
+    &:focus-visible {
+      border-image: linear-gradient(to right, #242424, rgb(255, 0, 0));
+      border-image-slice: 1;
+    }
+  }
+}

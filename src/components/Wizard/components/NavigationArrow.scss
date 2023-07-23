@@ -1,0 +1,26 @@
+.navigation-arrow {
+  background-color: rgb(233, 239, 244);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 2rem;
+  aspect-ratio: 1;
+
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+
+  cursor: pointer;
+
+  &.disabled {
+    background-color: rgb(138, 153, 138);
+  }
+  svg {
+    width: 1rem;
+    height: 1rem;
+
+    &.left {
+      transform: rotate(180deg);
+    }
+  }
+}

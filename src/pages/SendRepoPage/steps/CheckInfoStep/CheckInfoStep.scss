@@ -1,0 +1,48 @@
+.check-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .info {
+      display: flex;
+      align-items: center;
+      font-size: 3rem;
+      font-weight: 600;
+      width: 100%;
+
+      .placeholder {
+        color: rgb(122, 124, 130);
+      }
+
+      span:nth-child(2) {
+        flex: 1;
+        text-align: left;
+      }
+
+      span:last-child {
+        margin-left: 1rem;
+
+        svg {
+          width: 2rem;
+          height: 2rem;
+
+          &.fail {
+            fill: rgb(255, 0, 0);
+          }
+
+          &.valid {
+            fill: rgb(11, 122, 11);
+          }
+        }
+      }
+    }
+  }
+}
