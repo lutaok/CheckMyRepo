@@ -8,6 +8,10 @@ export default defineConfig({
   define: {
     "process.env": process.env,
   },
+  server: {
+    host: true,
+    port: 4173,
+  },
   resolve: {
     alias: {
       "@api": path.resolve(__dirname, "src/api"),
