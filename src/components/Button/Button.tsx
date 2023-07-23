@@ -7,18 +7,20 @@ interface ButtonProps {
   className?: string;
   disabled?: boolean;
   icon?: ReactNode;
+  type?: "button" | "submit";
   onClick: () => void;
 }
 
-const Button = ({ children, className, disabled, icon, onClick }: ButtonProps): JSX.Element => {
+const Button = ({ children, className, disabled, icon, type = "button", onClick }: ButtonProps): JSX.Element => {
   const buttonClasses = {
     button: true,
     disabled: !!disabled,
+    submit: type === "submit",
     [`${className}`]: !!className,
   };
 
   return (
-    <button className={classNames(buttonClasses)} disabled={!!disabled} onClick={onClick}>
+    <button className={classNames(buttonClasses)} disabled={disabled} onClick={onClick}>
       {children}
       {icon && icon}
     </button>

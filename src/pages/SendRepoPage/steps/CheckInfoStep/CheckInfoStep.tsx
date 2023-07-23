@@ -112,6 +112,7 @@ const CheckInfoStep = ({ repoInfo, handleSubmit }: CheckInfoStepProps): JSX.Elem
       </div>
 
       <Button
+        type="submit"
         disabled={isSubmitDisabled}
         onClick={() => {
           if (repoUrl) {

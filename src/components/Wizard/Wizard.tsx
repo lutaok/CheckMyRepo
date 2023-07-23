@@ -36,7 +36,7 @@ const Wizard = ({ currentStep, steps }: WizardProps): JSX.Element => {
         <h1>{selectedStep.title}</h1>
         {isStepWithBothArrows(selectedStep) && <NavigationArrow direction="right" handleNextStep={selectedStep.handleNextStep} />}
       </div>
-      <div className="step-content">{selectedStep.content}</div>
+      <div className="step-content">{selectedStep && selectedStep.content}</div>
     </>
   );
 };
