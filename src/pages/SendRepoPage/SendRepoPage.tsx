@@ -18,7 +18,7 @@ export interface RepoInfo {
   repositoryName: string;
 }
 
-const API_KEY = import.meta.env.VITE_PUSHMORE_ENDPOINT_TEST_KEY;
+const API_KEY = import.meta.env.VITE_PUSHMORE_ENDPOINT_KEY;
 const PUSHMORE_SENDER = import.meta.env.VITE_PUSHMORE_SENDER;
 
 const SendRepoPage = () => {
